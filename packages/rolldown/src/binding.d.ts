@@ -49,6 +49,7 @@ export interface BindingOutputChunk {
 export interface BindingOutputOptions {
   entryFileNames?: string
   chunkFileNames?: string
+  banner?: string
   dir?: string
   exports?: 'default' | 'named' | 'none' | 'auto'
   format?: 'esm' | 'cjs'
