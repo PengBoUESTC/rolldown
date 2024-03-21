@@ -49,6 +49,9 @@ pub fn normalize_binding_options(
     dir: output_options.dir,
     sourcemap: output_options.sourcemap.map(Into::into),
     banner: output_options.banner,
+    footer: output_options.footer,
+    intro: output_options.intro,
+    outro: output_options.outro,
     ..Default::default()
   };
 

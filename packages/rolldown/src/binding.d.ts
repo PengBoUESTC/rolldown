@@ -56,7 +56,10 @@ export interface BindingOutputOptions {
   banner?: string
   dir?: string
   exports?: 'default' | 'named' | 'none' | 'auto'
+  footer?: string
   format?: 'es' | 'cjs'
+  intro?: string
+  outro?: string
   plugins: Array<PluginOptions>
   sourcemap?: 'file' | 'inline' | 'hidden'
 }

@@ -8,6 +8,9 @@ export interface OutputOptions {
   exports?: RollupOutputOptions['exports']
   sourcemap?: RollupOutputOptions['sourcemap']
   banner?: string
+  footer?: string
+  intro?: string
+  outro?: string
 }
 
 function normalizeFormat(
@@ -43,7 +46,7 @@ function normalizeSourcemap(
 export function normalizeOutputOptions(
   opts: OutputOptions,
 ): BindingOutputOptions {
-  const { dir, format, exports, sourcemap, banner } = opts
+  const { dir, format, exports, sourcemap, banner, footer, intro, outro } = opts
   return {
     dir: dir,
     format: normalizeFormat(format),
@@ -51,5 +54,8 @@ export function normalizeOutputOptions(
     sourcemap: normalizeSourcemap(sourcemap),
     plugins: [],
     banner,
+    footer,
+    intro,
+    outro,
   }
 }

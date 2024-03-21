@@ -80,6 +80,9 @@ pub fn normalize_options(
       .into(),
     dir: "dist".to_string(),
     banner: raw_output.banner,
+    footer: raw_output.footer,
+    intro: raw_output.intro,
+    outro: raw_output.outro,
     format: raw_output.format.unwrap_or(crate::OutputFormat::Esm),
     sourcemap: raw_output.sourcemap.unwrap_or(SourceMapType::Hidden),
   };

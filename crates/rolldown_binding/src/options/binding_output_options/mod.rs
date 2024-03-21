@@ -26,6 +26,7 @@ pub struct BindingOutputOptions {
   // extend: boolean;
   // externalLiveBindings: boolean;
   // footer: () => string | Promise<string>;
+  pub footer: Option<String>,
   #[napi(ts_type = "'es' | 'cjs'")]
   pub format: Option<String>,
   // freeze: boolean;
@@ -36,12 +37,14 @@ pub struct BindingOutputOptions {
   // inlineDynamicImports: boolean;
   // interop: GetInterop;
   // intro: () => string | Promise<string>;
+  pub intro: Option<String>,
   // manualChunks: ManualChunksOption;
   // minifyInternalExports: boolean;
   // name: string | undefined;
   // namespaceToStringTag: boolean;
   // noConflict: boolean;
   // outro: () => string | Promise<string>;
+  pub outro: Option<String>,
   // paths: OptionsPaths;
   pub plugins: Vec<PluginOptions>,
   // preferConst: boolean;
